@@ -1,7 +1,7 @@
 ---
-- name: say thanks
+- name: Say thanks
   hosts: localhost
   gather_facts: false
   tasks:
-    - debug:
-        msg: "Thank you, {{ ansible_eda.event.sender | default('my friend') }}"
+    - ansible.builtin.debug:
+        msg: Thank you, {{ ansible_eda.event.sender | default('my friend') }}
